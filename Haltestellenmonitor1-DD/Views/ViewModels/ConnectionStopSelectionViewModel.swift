@@ -2,11 +2,12 @@
 //  ConnectionStopSelectionViewModel.swift
 //  Haltestellenmonitor1-DD
 //
-//  Created by Kiara on 25.10.23.
+//  Created by Kiara on 15.10.24.
 //
 
 
 import UIKit
+import SwiftUI
 
 class ConnectionStopSelectionViewModel: ObservableObject {
     @Published private var searchText = ""
