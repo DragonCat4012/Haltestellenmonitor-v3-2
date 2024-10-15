@@ -68,7 +68,7 @@ class ConnectionViewModel: ObservableObject {
             print ("error: \(error)")
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 Task {
-                    await getTripData(isNext: isNext)
+                    await self.getTripData(isNext: isNext)
                 }
             }
         }
@@ -103,7 +103,7 @@ class ConnectionViewModel: ObservableObject {
         return TripStandardSettings(mot: mot)
     }
     
-    func saveFavorite() {
+    @MainActor func saveFavorite() {
         let standardSettings = getStandardSettings()
         
         if favoriteName.isEmpty {

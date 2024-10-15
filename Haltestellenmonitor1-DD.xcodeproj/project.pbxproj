@@ -202,6 +202,8 @@
 		F1520EE32AE96E5A001E3E05 /* widgetLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1520EE12AE96E5A001E3E05 /* widgetLocationManager.swift */; };
 		F19FC6EE2AE9974C00F65316 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19FC6ED2AE9974C00F65316 /* ColorManager.swift */; };
 		F1A7E7CB2AEA988C00E1910F /* TripSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A7E7CA2AEA988C00E1910F /* TripSectionViewModel.swift */; };
+		F1B1528F2CBEA7890016F6B5 /* ConnectionStopSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1528E2CBEA7890016F6B5 /* ConnectionStopSelectionViewModel.swift */; };
+		F1B152912CBEA7960016F6B5 /* ConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B152902CBEA7960016F6B5 /* ConnectionViewModel.swift */; };
 		F1BC367D2BC3E16100629780 /* MotColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC367C2BC3E16100629780 /* MotColors.swift */; };
 		F1BC367E2BC3E1C800629780 /* MotColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC367C2BC3E16100629780 /* MotColors.swift */; };
 		F1BC367F2BC3E1C800629780 /* MotColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC367C2BC3E16100629780 /* MotColors.swift */; };
@@ -358,6 +360,8 @@
 		F1520EE12AE96E5A001E3E05 /* widgetLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgetLocationManager.swift; sourceTree = "<group>"; };
 		F19FC6ED2AE9974C00F65316 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		F1A7E7CA2AEA988C00E1910F /* TripSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSectionViewModel.swift; sourceTree = "<group>"; };
+		F1B1528E2CBEA7890016F6B5 /* ConnectionStopSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStopSelectionViewModel.swift; sourceTree = "<group>"; };
+		F1B152902CBEA7960016F6B5 /* ConnectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewModel.swift; sourceTree = "<group>"; };
 		F1BC367C2BC3E16100629780 /* MotColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -488,6 +492,7 @@
 		D03A269329EEB976005B0600 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F1B1528D2CBEA77F0016F6B5 /* ViewModels */,
 				D0142C572A1119D500646C94 /* About.swift */,
 				D0BD66D529F026D7004E574C /* ConnectionStopSelectionView.swift */,
 				D0BD66D129F01B99004E574C /* ConnectionView.swift */,
@@ -680,6 +685,15 @@
 				F1520EE12AE96E5A001E3E05 /* widgetLocationManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		F1B1528D2CBEA77F0016F6B5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F1B1528E2CBEA7890016F6B5 /* ConnectionStopSelectionViewModel.swift */,
+				F1B152902CBEA7960016F6B5 /* ConnectionViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -931,6 +945,7 @@
 				D0142C3A2A0F909E00646C94 /* DepartureBinding.swift in Sources */,
 				D09A505B2C4FBF43006CB5D6 /* DepartureRequest.swift in Sources */,
 				D040EC2729EEEB85002DFEBF /* LocationManager.swift in Sources */,
+				F1B1528F2CBEA7890016F6B5 /* ConnectionStopSelectionViewModel.swift in Sources */,
 				D0C1ECDA29F2FA50001D214D /* TripStandardSettings.swift in Sources */,
 				D0142C4E2A11039600646C94 /* GaussKrueger.swift in Sources */,
 				D0142C5C2A1128E900646C94 /* TripRequestShort.swift in Sources */,
@@ -949,6 +964,7 @@
 				D09A504E2C4FA249006CB5D6 /* StopEvent.swift in Sources */,
 				D0C1ECC029F283DE001D214D /* SingleTripRow.swift in Sources */,
 				D03A269629EEB9A7005B0600 /* StopRow.swift in Sources */,
+				F1B152912CBEA7960016F6B5 /* ConnectionViewModel.swift in Sources */,
 				D040EC2229EED774002DFEBF /* DateParser.swift in Sources */,
 				D0142C5F2A112CA900646C94 /* StopCoordinate.swift in Sources */,
 				D0C1ECDE29F3008B001D214D /* RegularStopRow.swift in Sources */,

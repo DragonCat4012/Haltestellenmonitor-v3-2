@@ -5,21 +5,22 @@
 //  Created by Kiara on 15.10.24.
 //
 
-
 import UIKit
 import SwiftUI
+import CoreLocation
+import Contacts
 
 class ConnectionStopSelectionViewModel: ObservableObject {
-    @Published private var searchText = ""
-    @Published private var placemarks: [CLPlacemark] = []
-    @Published private var location: CLLocation?
-    @Published private var addressString = ""
-    @Published private var showPicker = false
+    @Published  var searchText = ""
+    @Published  var placemarks: [CLPlacemark] = []
+    @Published  var location: CLLocation?
+    @Published  var addressString = ""
+    @Published  var showPicker = false
     
-    @Published private var showNoAddressAlert = false
-    @Published private var contactName = ""
-    @Published private var addresses: [CNLabeledValue<CNPostalAddress>] = []
-
+    @Published  var showNoAddressAlert = false
+    @Published  var contactName = ""
+    @Published  var addresses: [CNLabeledValue<CNPostalAddress>] = []
+    
     func changePlace() {
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(searchText) { (placemarks, error) in
@@ -34,14 +35,14 @@ class ConnectionStopSelectionViewModel: ObservableObject {
             self.location = location
             
             if placemarks.first != nil {
-                addressString = "\(placemarks.first?.name ?? ""), \(placemarks.first?.postalCode ?? "") \(placemarks.first?.locality ?? "")"
+                self.addressString = "\(placemarks.first?.name ?? ""), \(placemarks.first?.postalCode ?? "") \(placemarks.first?.locality ?? "")"
             } else {
-                addressString = ""
+                self.addressString = ""
             }
         }
     }
-
-        func selectContact(contact: CNContact) {
+    
+    func selectContact(contact: CNContact) {
         if contact.givenName == "" && contact.familyName == "" && contact.organizationName != "" {
             contactName = contact.organizationName
         } else {
@@ -58,11 +59,11 @@ class ConnectionStopSelectionViewModel: ObservableObject {
             selectContactAddress(address: contact.postalAddresses.first!.value)
             return
         }
-
+        
         addresses = contact.postalAddresses
     }
-
-        func selectContactAddress(address: CNPostalAddress) {
+    
+    func selectContactAddress(address: CNPostalAddress) {
         let addressStr = "\(address.street), \(address.postalCode) \(address.city)"
         
         let geoCoder = CLGeocoder()
